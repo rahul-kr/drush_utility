@@ -23,7 +23,7 @@ class DrushHelper {
       $links = $html_dom->getElementsByTagName('a');
       foreach ($links as $link) {
         $url = parse_url($link->getAttribute('href'));
-        if (isset($url['host'])) {
+        if (isset($url['host']) && strcasecmp($url['host'], $_SERVER['HTTP_HOST']) != 0) {
           $link->setAttribute('rel', 'nofollow');
         }
       }

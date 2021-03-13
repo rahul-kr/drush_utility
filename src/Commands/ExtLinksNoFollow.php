@@ -33,7 +33,7 @@ class ExtLinksNoFollow extends DrushCommands {
    * @usage extl-nf article 5 OR extl-nf --all article
    */
   public function addAttNoFollow($type, $nid = 0, array $options = ['all' => FALSE]) {
-    if(!$nid && !$options['all']) {
+    if (!$nid && !$options['all']) {
       throw new UserAbortException("Either pass second parameter nid or run command with --all option.");
     }
     elseif ($nid && !$options['all']) {
