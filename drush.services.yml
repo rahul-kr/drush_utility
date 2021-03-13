@@ -1,0 +1,5 @@
+services:
+  drush_utility.commands:
+    class: \Drupal\drush_utility\Commands\ExtLinksNoFollow
+    tags:
+      - { name: drush.command }

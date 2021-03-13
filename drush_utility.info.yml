@@ -1,0 +1,5 @@
+name: 'Drush Utility'
+type: module
+description: 'Utility for Drush commands'
+core: 8.x
+package: 'Drush Custom Utility'

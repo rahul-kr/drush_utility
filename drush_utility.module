@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains drush_utility.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drush_utility_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drush_utility module.
+    case 'help.page.drush_utility':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Utility for Drush commands') . '</p>';
+      return $output;
+
+    default:
+  }
+}
