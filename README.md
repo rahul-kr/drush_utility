@@ -23,7 +23,7 @@ Command with all options and parameters
 
 2. drush extl-nf article 2
 
-3. If you'll enter wrong paramerters it will give expections with usage example.
+3. If you'll enter wrong paramerters it will give exception with usage example.
    Wrong command - drush extl-nf article test
 
 Limitation
