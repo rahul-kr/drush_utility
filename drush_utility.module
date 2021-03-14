@@ -15,8 +15,11 @@ function drush_utility_help($route_name, RouteMatchInterface $route_match) {
     // Main module help for the drush_utility module.
     case 'help.page.drush_utility':
       $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Utility for Drush commands') . '</p>';
+      $output .= '<h3>' . t('About Drush Utility') . '</h3>';
+      $output .= '<p>' . t('Utility for dustom drush commands') . '</p>';
+      $output .= '<p>' . t('It is for updating external links in body with the attributes no-follow i.e
+      rel="nofollow"') . '</p>';
+      $output .= '<p>' . t('Ex. drush extl-nf --all article') . '</p>';
       return $output;
 
     default:

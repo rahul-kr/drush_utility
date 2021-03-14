@@ -36,7 +36,7 @@ class ExtLinksNoFollow extends DrushCommands {
     if (!$nid && !$options['all']) {
       throw new UserAbortException("Either pass second parameter nid or run command with --all option.");
     }
-    elseif ($nid && !$options['all']) {
+    elseif ($nid && is_int($nid) && !$options['all']) {
       $update_flag = DrushHelper::processNodeExtLinks($nid, $type);
       if ($update_flag == TRUE) {
         $this->output()->writeln("Node is updated");
@@ -61,6 +61,10 @@ class ExtLinksNoFollow extends DrushCommands {
       else {
         throw new UserAbortException("Command operation cancelled");
       }
+    }
+    else {
+      $this->output()->writeln("Use command like -  extl-nf article 5 OR extl-nf --all article");
+      throw new UserAbortException("Something is unusual");
     }
   }
 
